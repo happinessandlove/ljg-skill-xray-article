@@ -49,33 +49,35 @@ user_invocable: true
 
 使用纯 ASCII 字符（仅用 +, -, |, >, <, /, \, *, =, . 等基础符号）绘制逻辑结构图。
 
-### 步骤 4: 生成 Org 报告
+### 步骤 4: 生成 Markdown 报告
 
-使用 Write 工具，按以下模板生成 org-mode 文件。要求：
+使用 Write 工具，按以下模板生成 Markdown 文件。要求：
 - 文字精确、简练、清晰
 - 使用自然段落，不使用表格
 - ASCII 图形仅用纯 ASCII 基础符号，不用 Unicode
 
-```org
-#+title:      xray-{简短标题}
-#+date:       [{YYYY-MM-DD Day HH:MM}]
-#+filetags:   :read:xray:article:
-#+identifier: {YYYYMMDDTHHMMSS}
-#+source:     {URL}
+````markdown
+---
+title: xray-{简短标题}
+date: {YYYY-MM-DD Day HH:MM}
+tags: [read, xray, article]
+identifier: {YYYYMMDDTHHMMSS}
+source: {URL}
+---
 
-* WISDOM CORE
+# WISDOM CORE
 
-#+begin_example
+```
 +--------------------------------------------------+
 |                                                  |
 |   {智慧公式}                                      |
 |                                                  |
 +--------------------------------------------------+
-#+end_example
+```
 
 {一句话解释公式含义}
 
-* LAYER 1: SURFACE SCAN
+# LAYER 1: SURFACE SCAN
 
 **主题域**: {主题}
 
@@ -86,7 +88,7 @@ user_invocable: true
 - {论据2}
 - {论据3}
 
-* LAYER 2: DEEP PENETRATION
+# LAYER 2: DEEP PENETRATION
 
 **问题意识**: {作者为何写此文}
 
@@ -96,9 +98,9 @@ user_invocable: true
 
 **反常识点**: {挑战常规认知之处}
 
-* LAYER 3: CORE LOCALIZATION
+# LAYER 3: CORE LOCALIZATION
 
-**智慧公式**: ~{公式}~
+**智慧公式**: `{公式}`
 
 **适用边界**:
 - 成立: {条件}
@@ -106,7 +108,7 @@ user_invocable: true
 
 **迁移潜力**: {领域1}, {领域2}, {领域3}
 
-* LAYER 4: WISDOM TOPOLOGY
+# LAYER 4: WISDOM TOPOLOGY
 
 **智慧连接**: {与哪些理论相似}
 
@@ -117,43 +119,43 @@ user_invocable: true
 2. {行动2}
 3. {行动3}
 
-* ARGUMENT TOPOLOGY
+# ARGUMENT TOPOLOGY
 
-#+begin_example
+```
 {纯 ASCII 逻辑结构图}
-#+end_example
+```
 
-* TRANSFER MATRIX
+# TRANSFER MATRIX
 
-**{领域1}**: {应用描述} --> ~{迁移公式}~
+**{领域1}**: {应用描述} --> `{迁移公式}`
 
-**{领域2}**: {应用描述} --> ~{迁移公式}~
+**{领域2}**: {应用描述} --> `{迁移公式}`
 
-**{领域3}**: {应用描述} --> ~{迁移公式}~
+**{领域3}**: {应用描述} --> `{迁移公式}`
 
-* COGNITIVE UPGRADE
+# COGNITIVE UPGRADE
 
-#+begin_example
+```
 +-------------------+         +-------------------+
 |     BEFORE        |         |     AFTER         |
 |                   |  --->   |                   |
 | {读前认知}         |         | {读后认知}         |
 +-------------------+         +-------------------+
-#+end_example
+```
 
-* ACTION PROTOCOL
+# ACTION PROTOCOL
 
 - [ ] {行动1}: {具体描述}
 - [ ] {行动2}: {具体描述}
 - [ ] {行动3}: {具体描述}
-```
+````
 
 ### 步骤 5: 保存并打开
 
 1. 生成时间戳：使用 Bash 执行 `date +%Y%m%dT%H%M%S` 获取当前时间
-2. 文件名格式（denote 规范）：`{时间戳}--xray-{简短标题}__read.org`
+2. 文件名格式（denote 规范）：`{时间戳}--xray-{简短标题}__read.md`
    - 简短标题：取文章标题前 3-5 个关键词，小写，用连字符连接
-   - 示例：`20260207T171500--xray-why-software-stocks-fall__read.org`
+   - 示例：`20260207T171500--xray-why-software-stocks-fall__read.md`
 3. 保存路径：`~/Documents/notes/{文件名}`
 4. 使用 Bash 执行：`open ~/Documents/notes/{文件名}`
 
