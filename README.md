@@ -7,7 +7,7 @@
 - 支持 URL 或粘贴全文输入
 - 四层分析：表层扫描 → 深层透视 → 晶核定位 → 智慧拓扑
 - 提炼智慧公式（可跨领域迁移）
-- 生成 Org-mode 格式报告，含 ASCII 可视化
+- 生成 Markdown 格式报告，含 ASCII 可视化
 
 ## 安装
 
@@ -26,7 +26,7 @@ git clone https://github.com/lijigang/ljg-skill-xray-article.git ~/.claude/skill
 
 ## 输出示例
 
-生成的 Org-mode 报告包含：
+生成的 Markdown 报告包含：
 
 - **WISDOM CORE** — 智慧公式
 - **LAYER 1-4** — 四层递进分析
